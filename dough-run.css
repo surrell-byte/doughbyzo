@@ -1,0 +1,66 @@
+.game-promo{display:flex;justify-content:center;margin-top:50px;padding:32px 22px;border:1px solid var(--line);border-top:4px solid var(--gold);border-radius:16px;background:var(--surface);text-align:center}
+.game-promo h2{margin-bottom:12px}
+.game-page{padding-top:34px}
+.game-wrap{max-width:820px}
+.game-card{padding:clamp(20px,5vw,38px);border:1px solid var(--line);border-top:4px solid var(--gold);border-radius:18px;background:var(--surface);text-align:center}
+.game-card h1{margin:8px 0 14px;font-size:clamp(30px,7vw,46px);line-height:1.12}
+.game-card .lead{margin-bottom:18px}
+.game-intro{max-width:620px;margin:0 auto}
+.game-mascot{margin:14px auto 20px;font-size:clamp(64px,16vw,100px);line-height:1.2}
+.game-primary{min-width:min(100%,240px)}
+.game-form{max-width:540px;margin:0 auto;text-align:left}
+.game-form .eyebrow,.game-form h1{text-align:center}
+.game-form label{display:block;margin:24px 0 8px;font:700 14px Poppins,sans-serif}
+.game-form input{display:block;width:100%;min-height:48px;padding:12px 14px;border:1px solid var(--line);border-radius:8px;background:var(--bg);color:var(--text);font:500 16px Poppins,sans-serif}
+.game-form input::placeholder{color:var(--muted);opacity:1}
+.game-form input:focus-visible{outline:3px solid var(--gold);outline-offset:2px}
+.game-actions{display:flex;justify-content:center;flex-wrap:wrap;gap:10px;margin-top:24px}
+.game-actions .btn{margin:0}
+.mode-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px;margin-top:28px}
+.mode-card{display:flex;flex-direction:column;align-items:center;padding:22px}
+.mode-card h2{font-size:clamp(21px,4vw,28px);margin:4px 0 10px}
+.mode-card p{color:var(--muted)}
+.mode-card .btn{margin-top:auto}
+.mode-icon{font-size:38px;line-height:1.2}
+.mode-best{font:500 13px Poppins,sans-serif}
+.game-help{color:var(--muted);font-size:13px;margin:16px 0 0}
+.game-topline{display:flex;justify-content:space-between;align-items:center;gap:12px;text-align:left}
+.game-topline .eyebrow{text-align:left}
+.game-top-actions{display:flex;align-items:center;gap:8px}
+.game-quit{margin:0}
+.game-pause{margin:0}
+.game-hud{display:flex;justify-content:space-between;gap:12px;margin:20px 0 8px;font:700 13px Poppins,sans-serif}
+.game-hud b{font-variant-numeric:tabular-nums}
+#dough-run-canvas{display:block;width:100%;height:auto;aspect-ratio:720/260;border:1px solid var(--line);border-radius:12px;background:var(--bg);image-rendering:pixelated;touch-action:manipulation}
+.game-status{min-height:1.5em;margin:8px 0;color:var(--gold-d);font:700 13px Poppins,sans-serif}
+.game-controls{display:flex;justify-content:center;gap:12px}
+.game-controls .btn{min-width:140px;margin:0;touch-action:none}
+.game-result{max-width:620px;margin:0 auto}
+.result-icon{margin:10px auto;font-size:clamp(64px,16vw,96px);line-height:1.2}
+.trophy{filter:drop-shadow(0 8px 12px #0003)}
+.reward-list{display:flex;justify-content:center;flex-wrap:wrap;gap:8px;margin:20px 0}
+.reward-list span{padding:8px 12px;border:1px solid var(--line);border-radius:999px;background:var(--bg);font:700 12px Poppins,sans-serif}
+@media(max-width:600px){
+ .game-page{padding:24px 0 40px}
+ .game-card{padding:20px 16px}
+ .mode-grid{grid-template-columns:1fr}
+ .game-hud{font-size:11px}
+ .game-help{display:none}
+ .game-controls{gap:8px}
+ .game-controls .btn{min-width:0;flex:1;padding:12px 10px}
+ .game-topline{align-items:flex-start}
+ .game-top-actions{gap:6px}
+ .game-top-actions .btn{padding:8px 10px;font-size:11px}
+}
+@media(max-width:600px) and (orientation:portrait){
+ #dough-run-canvas{aspect-ratio:3/2}
+}
+@media(max-width:360px){
+ .game-play{padding:16px 12px}
+ .game-topline .eyebrow{font-size:10px;letter-spacing:.14em}
+ .game-hud{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:4px 8px;font-size:11px}
+ .game-hud span:last-child{grid-column:1/-1;text-align:center}
+ .game-quit{padding:8px 12px}
+ .game-controls{gap:8px}
+ .game-controls .btn{min-height:44px;padding:10px 4px;font-size:10px;letter-spacing:.04em}
+}
